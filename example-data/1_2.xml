@@ -1,0 +1,701 @@
+﻿<Block xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ApplicationStartTime>20/10/2023 10:38:12.890</ApplicationStartTime>
+	<ApplicationUnityStartTime>14.7479668</ApplicationUnityStartTime>
+	<ParticipantID>1</ParticipantID>
+	<SwitchSide>false</SwitchSide>
+	<BlockTrials>
+		<Trial>
+			<TrialNumber>1</TrialNumber>
+			<Condition>WalkEgo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:57:44.906</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1171.95642</Start_TrialTrial_UnityTimeStamp>
+					<Id>18</Id>
+					<Real_Position>
+						<x>2.77</x>
+						<y>-1.8</y>
+						<z>-5.02</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>2.62667823</x>
+						<y>-1.79999971</y>
+						<z>-4.90148354</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:57:50.937</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1177.987</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:57:54.026</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1181.07593</Start_TrialTrial_UnityTimeStamp>
+					<Id>54</Id>
+					<Real_Position>
+						<x>0.64</x>
+						<y>-1.8</y>
+						<z>-5.49</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.8330656</x>
+						<y>-1.79999888</y>
+						<z>-5.33389425</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:57:57.246</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1184.29675</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:58:00.333</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1187.383</Start_TrialTrial_UnityTimeStamp>
+					<Id>28</Id>
+					<Real_Position>
+						<x>4.77</x>
+						<y>-1.8</y>
+						<z>-1.37</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.423273</x>
+						<y>-1.799999</y>
+						<z>-1.8301332</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:58:06.298</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1193.348</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:58:09.386</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1196.43518</Start_TrialTrial_UnityTimeStamp>
+					<Id>95</Id>
+					<Real_Position>
+						<x>4.51</x>
+						<y>-1.8</y>
+						<z>-3.5</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.17791557</x>
+						<y>-1.79999948</y>
+						<z>-3.20300961</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:58:13.538</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1200.5885</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>2</TrialNumber>
+			<Condition>Teleport</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:59:16.575</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1263.62537</Start_TrialTrial_UnityTimeStamp>
+					<Id>59</Id>
+					<Real_Position>
+						<x>5.59</x>
+						<y>-1.8</y>
+						<z>-6.5</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.8794136</x>
+						<y>-1.8</y>
+						<z>-5.90553</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:59:22.816</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1269.86646</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:59:25.904</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1272.954</Start_TrialTrial_UnityTimeStamp>
+					<Id>85</Id>
+					<Real_Position>
+						<x>2.63</x>
+						<y>-1.8</y>
+						<z>-8.16</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>2.5620594</x>
+						<y>-1.79999971</y>
+						<z>-8.006363</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:59:29.324</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1276.3739</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:59:32.412</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1279.4624</Start_TrialTrial_UnityTimeStamp>
+					<Id>20</Id>
+					<Real_Position>
+						<x>2.08</x>
+						<y>-1.8</y>
+						<z>-1.73</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>2.55289626</x>
+						<y>-1.799999</y>
+						<z>-1.83786154</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:59:43.440</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1290.49048</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 10:59:46.527</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1293.57715</Start_TrialTrial_UnityTimeStamp>
+					<Id>83</Id>
+					<Real_Position>
+						<x>0.72</x>
+						<y>-1.8</y>
+						<z>-4.52</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>-0.117958307</x>
+						<y>-1.79999924</y>
+						<z>-3.876602</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 10:59:55.990</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1303.03967</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>3</TrialNumber>
+			<Condition>WalkAllo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:01:12.342</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1379.39233</Start_TrialTrial_UnityTimeStamp>
+					<Id>98</Id>
+					<Real_Position>
+						<x>5.2</x>
+						<y>-1.8</y>
+						<z>-3.42</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.406307</x>
+						<y>-1.79999948</y>
+						<z>-3.00386429</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:01:38.608</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1405.65771</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:01:41.695</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1408.74451</Start_TrialTrial_UnityTimeStamp>
+					<Id>7</Id>
+					<Real_Position>
+						<x>0.81</x>
+						<y>-1.8</y>
+						<z>-3.09</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>1.04499674</x>
+						<y>-1.79999924</y>
+						<z>-2.99173617</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:01:50.447</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1417.49634</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:01:53.534</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1420.58411</Start_TrialTrial_UnityTimeStamp>
+					<Id>1</Id>
+					<Real_Position>
+						<x>8.48</x>
+						<y>-1.8</y>
+						<z>-6.08</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>8.494668</x>
+						<y>-1.79999983</y>
+						<z>-5.65091324</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:01:55.855</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1422.90454</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:01:58.942</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1425.99207</Start_TrialTrial_UnityTimeStamp>
+					<Id>41</Id>
+					<Real_Position>
+						<x>6</x>
+						<y>-1.8</y>
+						<z>-0.74</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>5.43880939</x>
+						<y>-1.799999</y>
+						<z>-1.05233979</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:02:08.548</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1435.59814</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>4</TrialNumber>
+			<Condition>WalkEgo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:03:39.828</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1526.87769</Start_TrialTrial_UnityTimeStamp>
+					<Id>99</Id>
+					<Real_Position>
+						<x>0.54</x>
+						<y>-1.8</y>
+						<z>-2.46</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.503952265</x>
+						<y>-1.79999948</y>
+						<z>-2.365668</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:03:43.659</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1530.70837</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:03:46.747</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1533.79675</Start_TrialTrial_UnityTimeStamp>
+					<Id>12</Id>
+					<Real_Position>
+						<x>7.61</x>
+						<y>-1.8</y>
+						<z>-1.61</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>7.14778233</x>
+						<y>-1.79999983</y>
+						<z>-1.55859911</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:03:52.288</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1539.33862</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:03:55.375</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1542.42529</Start_TrialTrial_UnityTimeStamp>
+					<Id>38</Id>
+					<Real_Position>
+						<x>10.24</x>
+						<y>-1.8</y>
+						<z>-3.25</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>9.640975</x>
+						<y>-1.79999948</y>
+						<z>-2.99693322</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:03:57.942</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1544.99219</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:04:01.028</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1548.07813</Start_TrialTrial_UnityTimeStamp>
+					<Id>82</Id>
+					<Real_Position>
+						<x>4.85</x>
+						<y>-1.8</y>
+						<z>-4.3</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>3.30985546</x>
+						<y>-1.79999959</y>
+						<z>-3.487628</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:04:04.172</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1551.22217</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>5</TrialNumber>
+			<Condition>Teleport</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:05:07.175</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1614.22485</Start_TrialTrial_UnityTimeStamp>
+					<Id>58</Id>
+					<Real_Position>
+						<x>-0.25</x>
+						<y>-1.8</y>
+						<z>-7.57</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.227763236</x>
+						<y>-1.79999959</y>
+						<z>-7.64814425</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:05:10.040</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1617.0907</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:05:13.127</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1620.17737</Start_TrialTrial_UnityTimeStamp>
+					<Id>102</Id>
+					<Real_Position>
+						<x>4.89</x>
+						<y>-1.8</y>
+						<z>-1.54</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>5.254062</x>
+						<y>-1.79999912</y>
+						<z>-1.13686848</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:05:26.709</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1633.75952</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:05:29.798</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1636.84827</Start_TrialTrial_UnityTimeStamp>
+					<Id>104</Id>
+					<Real_Position>
+						<x>3.95</x>
+						<y>-1.8</y>
+						<z>-5.36</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>3.73841381</x>
+						<y>-1.79999971</y>
+						<z>-4.454185</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:05:35.262</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1642.31213</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:05:38.349</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1645.39978</Start_TrialTrial_UnityTimeStamp>
+					<Id>21</Id>
+					<Real_Position>
+						<x>8.95</x>
+						<y>-1.8</y>
+						<z>-3.04</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>8.42705</x>
+						<y>-1.79999948</y>
+						<z>-3.00377464</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:05:42.591</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1649.64063</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>6</TrialNumber>
+			<Condition>WalkEgo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:06:56.467</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1723.518</Start_TrialTrial_UnityTimeStamp>
+					<Id>37</Id>
+					<Real_Position>
+						<x>3.57</x>
+						<y>-1.8</y>
+						<z>-1.34</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>3.73423958</x>
+						<y>-1.799999</y>
+						<z>-1.44150162</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:07:00.976</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1728.02661</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:07:04.064</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1731.11353</Start_TrialTrial_UnityTimeStamp>
+					<Id>48</Id>
+					<Real_Position>
+						<x>4.96</x>
+						<y>-1.8</y>
+						<z>-3.18</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>5.04115</x>
+						<y>-1.79999971</y>
+						<z>-3.98894119</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:07:18.512</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1745.56226</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:07:21.601</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1748.65051</Start_TrialTrial_UnityTimeStamp>
+					<Id>100</Id>
+					<Real_Position>
+						<x>0.73</x>
+						<y>-1.8</y>
+						<z>-4.27</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.575437069</x>
+						<y>-1.79999936</y>
+						<z>-2.67393064</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:07:28.052</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1755.10242</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:07:31.140</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1758.19</Start_TrialTrial_UnityTimeStamp>
+					<Id>67</Id>
+					<Real_Position>
+						<x>1.94</x>
+						<y>-1.8</y>
+						<z>-6.14</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>1.2346139</x>
+						<y>-1.79999912</y>
+						<z>-4.801895</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:07:37.126</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1764.17639</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>7</TrialNumber>
+			<Condition>WalkAllo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:08:41.640</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1828.68982</Start_TrialTrial_UnityTimeStamp>
+					<Id>42</Id>
+					<Real_Position>
+						<x>0.88</x>
+						<y>-1.8</y>
+						<z>-2.69</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.906623363</x>
+						<y>-1.79999924</y>
+						<z>-3.00119925</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:08:47.093</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1834.14258</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:08:50.180</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1837.2301</Start_TrialTrial_UnityTimeStamp>
+					<Id>108</Id>
+					<Real_Position>
+						<x>5.17</x>
+						<y>-1.8</y>
+						<z>-7.87</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.8069067</x>
+						<y>-1.79999959</y>
+						<z>-7.437176</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:08:52.467</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1839.51709</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:08:55.555</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1842.60571</Start_TrialTrial_UnityTimeStamp>
+					<Id>26</Id>
+					<Real_Position>
+						<x>8.47</x>
+						<y>-1.8</y>
+						<z>-5.99</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>8.218562</x>
+						<y>-1.79999948</y>
+						<z>-6.08392334</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:08:58.221</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1845.27112</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:09:01.308</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1848.35828</Start_TrialTrial_UnityTimeStamp>
+					<Id>57</Id>
+					<Real_Position>
+						<x>4.81</x>
+						<y>-1.8</y>
+						<z>-1.47</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>5.5344243</x>
+						<y>-1.799999</y>
+						<z>-1.21393406</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:09:05.206</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1852.25537</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>8</TrialNumber>
+			<Condition>Teleport</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:10:24.768</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1931.81848</Start_TrialTrial_UnityTimeStamp>
+					<Id>74</Id>
+					<Real_Position>
+						<x>7</x>
+						<y>-1.8</y>
+						<z>-0.98</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>6.845544</x>
+						<y>-1.79999971</y>
+						<z>-1.19040787</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:10:30.287</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1937.337</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:10:33.375</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1940.42517</Start_TrialTrial_UnityTimeStamp>
+					<Id>36</Id>
+					<Real_Position>
+						<x>0.32</x>
+						<y>-1.8</y>
+						<z>-7.5</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.124462873</x>
+						<y>-1.79999959</y>
+						<z>-7.69445</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:10:36.174</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1943.22437</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:10:39.261</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1946.31165</Start_TrialTrial_UnityTimeStamp>
+					<Id>47</Id>
+					<Real_Position>
+						<x>6.26</x>
+						<y>-1.8</y>
+						<z>-5.12</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>6.11643934</x>
+						<y>-1.79999971</y>
+						<z>-4.488733</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:10:42.992</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1950.0426</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:10:46.080</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>1953.13</Start_TrialTrial_UnityTimeStamp>
+					<Id>4</Id>
+					<Real_Position>
+						<x>8.54</x>
+						<y>-1.8</y>
+						<z>-5.8</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>8.900711</x>
+						<y>-1.8</y>
+						<z>-5.764028</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:10:47.935</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>1954.98523</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+		<Trial>
+			<TrialNumber>9</TrialNumber>
+			<Condition>WalkAllo</Condition>
+			<ObjectNumber>4</ObjectNumber>
+			<Repeats>0</Repeats>
+			<Encode_Time>30</Encode_Time>
+			<ConfigurationInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:12:01.368</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>2028.41748</Start_TrialTrial_UnityTimeStamp>
+					<Id>23</Id>
+					<Real_Position>
+						<x>2.35</x>
+						<y>-1.8</y>
+						<z>-2.59</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>2.48531342</x>
+						<y>-1.79999948</y>
+						<z>-2.296268</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:12:10.375</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>2037.42432</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:12:13.461</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>2040.51111</Start_TrialTrial_UnityTimeStamp>
+					<Id>93</Id>
+					<Real_Position>
+						<x>4.29</x>
+						<y>-1.8</y>
+						<z>-6.79</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>4.07173634</x>
+						<y>-1.79999959</y>
+						<z>-7.452611</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:12:16.004</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>2043.0542</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:12:19.092</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>2046.14209</Start_TrialTrial_UnityTimeStamp>
+					<Id>32</Id>
+					<Real_Position>
+						<x>-0.11</x>
+						<y>-1.8</y>
+						<z>-6.76</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>0.0474281423</x>
+						<y>-1.79999948</y>
+						<z>-7.03868628</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:12:24.445</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>2051.49536</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+				<ObjectInfo>
+					<Start_Trial_TimeStamp>20/10/2023 11:12:27.532</Start_Trial_TimeStamp>
+					<Start_TrialTrial_UnityTimeStamp>2054.58276</Start_TrialTrial_UnityTimeStamp>
+					<Id>19</Id>
+					<Real_Position>
+						<x>8.17</x>
+						<y>-1.8</y>
+						<z>-1.89</z>
+					</Real_Position>
+					<Placed_Position>
+						<x>7.12734032</x>
+						<y>-1.79999948</y>
+						<z>-2.2238102</z>
+					</Placed_Position>
+					<End_Trial_TimeStamp>20/10/2023 11:12:32.431</End_Trial_TimeStamp>
+					<End_Trial_UnityTimeStamp>2059.48071</End_Trial_UnityTimeStamp>
+				</ObjectInfo>
+			</ConfigurationInfo>
+		</Trial>
+	</BlockTrials>
+</Block>
