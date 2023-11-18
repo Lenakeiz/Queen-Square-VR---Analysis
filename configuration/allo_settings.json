@@ -1,0 +1,12 @@
+{
+  "EgocentricTeleportX": 1.0,
+  "EgocentricTeleportZ": 1.0,
+  "AllocentricTeleportX": -2.0,
+  "AllocentricTeleportZ": -1.0,
+  "TotalTrialsPerConditionPerBlock": 3,
+  "TotalBlocks": 4,
+  "EncodingSecondsPerConfiguration": 30,
+  "ObjectsAutomaticallyReplacedAtRetrieval": 1,
+  "WaitSecondsWithinTrialBetweenMoveConditions": 10.0,
+  "Language": "du-BE"
+}

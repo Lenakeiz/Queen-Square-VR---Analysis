@@ -4,7 +4,6 @@ from config import Config
 from analysis.xmlanalyzer import XMLAnalyzer
 from analysis.objects_configurator import ObjectConfigurator
 
-
 def order_positions(positions):
     """
     Order a set of positions based on the x-coordinate.
@@ -17,7 +16,7 @@ def order_positions(positions):
     """
     return sorted(list(positions), key=lambda x: x[0])
 
-def check_object_positions_integrity_from_original_file_to(object_positions_from_configurator, object_positions_from_participant_file):
+def check_object_positions_integrity_from_original_file_to_extracted_data(object_positions_from_configurator, object_positions_from_participant_file):
     # Match XML configurations to CSV configurations
     matches = []
     for trial_num, xml_config in object_positions_from_participant_file:
@@ -45,4 +44,4 @@ if __name__ == "__main__":
     object_configurator.read_positions()
     object_positions_from_configurator = object_configurator.csv_positions
 
-    check_object_positions_integrity_from_original_file_to(object_positions_from_configurator,all_object_positions)
+    check_object_positions_integrity_from_original_file_to_extracted_data(object_positions_from_configurator,all_object_positions)
