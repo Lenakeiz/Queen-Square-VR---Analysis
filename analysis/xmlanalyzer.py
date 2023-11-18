@@ -19,11 +19,19 @@ class XMLAnalyzer:
         all_positions = []
         for xml_file in self.xml_files:
             block_num = int(xml_file.split('_')[-1].split('.')[0])
-            positions = self.extract_object_positions_from_xml(xml_file, block_num)
+            positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Real_Position')
+            all_positions.extend(positions)
+        return all_positions
+    
+    def extract_all_placed_positions(self):
+        all_positions = []
+        for xml_file in self.xml_files:
+            block_num = int(xml_file.split('_')[-1].split('.')[0])
+            positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Placed_Position')
             all_positions.extend(positions)
         return all_positions
 
-    def extract_object_positions_from_xml(self, xml_file, block_num):
+    def extract_object_positions_tag_from_xml(self, xml_file, block_num, tag_name):
         positions_list = []
         tree = etree.parse(xml_file)
         trials = tree.xpath('//Trial')
@@ -34,8 +42,8 @@ class XMLAnalyzer:
             
             positions = set()
             for obj_info in object_infos:
-                x = float(obj_info.xpath('./Real_Position/x/text()')[0])
-                z = float(obj_info.xpath('./Real_Position/z/text()')[0])
+                x = float(obj_info.xpath(f"./{tag_name}/x/text()")[0])
+                z = float(obj_info.xpath(f"./{tag_name}/z/text()")[0])
                 positions.add((x, z))
             
             overall_trial_num = (block_num - 1) * 9 + trial_num
