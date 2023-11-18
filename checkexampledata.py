@@ -59,13 +59,13 @@ def count_conditions_in_files(file_paths):
                 
     return condition_dict
 
-def main():
+def check_object_configurations_on_real_data():
     # List of XML files provided by the user
     xml_files = [
-        "./ExampleData/123456789_1.xml",
-        "./ExampleData/123456789_2.xml",
-        "./ExampleData/123456789_3.xml",
-        "./ExampleData/123456789_4.xml"
+        "./example-data/1_1.xml",
+        "./example-data/1_2.xml",
+        "./example-data/1_3.xml",
+        "./example-data/1_4.xml"
     ]
     
     # Call the function and print the results
@@ -101,4 +101,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    check_object_configurations_on_real_data()
