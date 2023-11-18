@@ -35,15 +35,14 @@ class TrialVisualizer:
         self.ax.add_artist(circle2)
 
         trial_number, positions = self.object_positions
-
-        print(f"Trial Number: {trial_number}")
-
-        for (x,z), color in zip(positions, self.colors):
-            self.ax.scatter(x, z, c=color, s=50)
-
         trial_number, placed_positions = self.placed_positions
-        for (x,z), color in zip(placed_positions, self.colors):
-            self.ax.scatter(x, z, marker='x', c=color, s=50)         
+        print(f"Plotting Trial Number: {trial_number}")
+
+        for (x1, z1), (x2, z2), color in zip(positions, placed_positions, self.colors):
+            self.ax.plot([x1, x2], [z1, z2], color=color, linestyle='--',linewidth=2) 
+            self.ax.scatter(x1, z1, c=color, s=50)
+            self.ax.scatter(x2, z2, marker='x', c=color, s=50)
+                  
 
         # Set title, axis labels, and axis limits
         self.ax.set_xlabel("X Coordinate")
@@ -54,7 +53,11 @@ class TrialVisualizer:
         self.ax.set_ylim(-10, 3)
         
         # Set equal aspect ratio after setting axis limits
-        self.ax.set_aspect('equal', adjustable='box')  
+        self.ax.set_aspect('equal', adjustable='box')
+
+        # Remove the box
+        self.ax.spines['top'].set_visible(False)
+        self.ax.spines['right'].set_visible(False)
 
     def plot(self):
         self._plot()
