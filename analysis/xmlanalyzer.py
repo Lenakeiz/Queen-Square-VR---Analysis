@@ -15,6 +15,14 @@ class XMLAnalyzer:
                 xml_files.append(os.path.join(self.folder_path, file))
         return xml_files
     
+    def extract_all_object_positions(self):
+        all_positions = []
+        for xml_file in self.xml_files:
+            block_num = int(xml_file.split('_')[-1].split('.')[0])
+            positions = self.extract_object_positions_from_xml(xml_file, block_num)
+            all_positions.extend(positions)
+        return all_positions
+
     def extract_object_positions_from_xml(self, xml_file, block_num):
         positions_list = []
         tree = etree.parse(xml_file)
