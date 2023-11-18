@@ -61,8 +61,8 @@ def generate_plots(csv_file_path, output_dir, zip_file_path):
                 zipf.write(os.path.join(root, file), file)
 
 if __name__ == "__main__":
-    csv_file_path = 'path/to/your/csv/file.csv'
-    output_dir = 'path/to/save/plots'
-    zip_file_path = 'path/to/save/plots.zip'
+    csv_file_path = './configuration/4.csv'
+    output_dir = './plots'
+    zip_file_path = './plots/configuration.zip'
     
     generate_plots(csv_file_path, output_dir, zip_file_path)
