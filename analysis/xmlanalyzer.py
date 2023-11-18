@@ -35,17 +35,18 @@ class XMLAnalyzer:
         positions_list = []
         tree = etree.parse(xml_file)
         trials = tree.xpath('//Trial')
-        
+
         for trial in trials:
             trial_num = int(trial.find('TrialNumber').text)
             object_infos = trial.xpath('.//ConfigurationInfo/ObjectInfo')
             
-            positions = set()
+            positions = []
             for obj_info in object_infos:
                 x = float(obj_info.xpath(f"./{tag_name}/x/text()")[0])
                 z = float(obj_info.xpath(f"./{tag_name}/z/text()")[0])
-                positions.add((x, z))
+                positions.append((x, z))
             
+            #ANDREA: need to change the hardcoded values for the number of trials per block
             overall_trial_num = (block_num - 1) * 9 + trial_num
             positions_list.append((overall_trial_num, positions))
                 
