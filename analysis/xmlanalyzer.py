@@ -53,6 +53,3 @@ class XMLAnalyzer:
                     condition_dict[condition] += content.count(condition)
                     
         return condition_dict
-    
-    def order_positions_by_x_position(self, positions):
-        return sorted(list(positions), key=lambda x: x[0])
