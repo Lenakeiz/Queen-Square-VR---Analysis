@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import zipfile
 import os
 
+from config import Config
+
 def generate_plots(csv_file_path, output_dir, zip_file_path):
     # Load the CSV file into a DataFrame
     df = pd.read_csv(csv_file_path, header=None)
@@ -61,8 +63,8 @@ def generate_plots(csv_file_path, output_dir, zip_file_path):
                 zipf.write(os.path.join(root, file), file)
 
 if __name__ == "__main__":
-    csv_file_path = './configuration/4.csv'
-    output_dir = './plots'
-    zip_file_path = './plots/configuration.zip'
+    csv_file_path = Config.OBJECT_CONFIGURATION_CSV_FILE_PATH
+    output_dir = Config.get_output_subdir("objectconfigurations")
+    zip_file_path = os.path.join(output_dir,'configurations.zip')
     
     generate_plots(csv_file_path, output_dir, zip_file_path)
