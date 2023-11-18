@@ -1,5 +1,6 @@
 import os
 from lxml import etree
+from config import Config
 
 def extract_positions_from_xml(xml_file, block_num):
     """
@@ -80,7 +81,7 @@ def check_object_configurations_on_real_data():
     
     # Read the positions from the 4.csv file without skipping any line
     csv_positions = []
-    with open("./4.csv", 'r') as file:
+    with open(Config.OBJECT_CONFIGURATION_CSV_FILE_PATH, 'r') as file:
         for line in file:
             values = line.strip().split(',')
             positions = {(float(values[i]), float(values[i+2])) for i in range(0, len(values), 3)}
