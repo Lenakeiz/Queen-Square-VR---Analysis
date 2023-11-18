@@ -1,6 +1,7 @@
 import os
 from lxml import etree
 from config import Config
+from analysis.xmlanalyzer import XMLAnalyzer
 
 def extract_positions_from_xml(xml_file, block_num):
     """
@@ -102,4 +103,13 @@ def check_object_configurations_on_real_data():
 
 
 if __name__ == "__main__":
-    check_object_configurations_on_real_data()
+
+    analyzer = XMLAnalyzer("1", "./example-data")
+    
+    result = analyzer.count_conditions_in_files()
+    
+    #Printing occurences of each condition in the entire task
+    for condition, count in result.items():
+        print(f"{condition}: {count} occurrences")
+
+    #check_object_configurations_on_real_data()

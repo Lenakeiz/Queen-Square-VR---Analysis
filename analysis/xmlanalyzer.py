@@ -5,7 +5,7 @@ from config import Config
 class XMLAnalyzer:
     def __init__(self, participant_id, folder_path) -> None:
         self.participant_id = participant_id
-        self.folder_path = os.path.join('..', folder_path) # Adjust the path relative to the analysis folder
+        self.folder_path = folder_path # Adjust the path relative to the analysis folder
         self.xml_files = self.find_xml_files()
 
     def find_xml_files(self):
@@ -36,7 +36,7 @@ class XMLAnalyzer:
         return positions_list
     
     def count_conditions_in_files(self):
-        condition_dict = Config.CONDITION_DICT
+        condition_dict = {condition: 0 for condition in Config.CONDITIONS}
 
         for xml_file in self.xml_files:
             with open(xml_file, 'r', encoding='utf-8') as file:
@@ -46,5 +46,5 @@ class XMLAnalyzer:
                     
         return condition_dict
     
-    def order_positions(self, positions):
+    def order_positions_by_x_position(self, positions):
         return sorted(list(positions), key=lambda x: x[0])
