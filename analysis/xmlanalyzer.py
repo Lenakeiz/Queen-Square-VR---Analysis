@@ -47,7 +47,7 @@ class XMLAnalyzer:
                 positions.append((x, z))
             
             #ANDREA: need to change the hardcoded values for the number of trials per block
-            overall_trial_num = (block_num - 1) * 9 + trial_num
+            overall_trial_num = (block_num - 1) * 6 + trial_num
             positions_list.append((overall_trial_num, positions))
                 
         return positions_list
