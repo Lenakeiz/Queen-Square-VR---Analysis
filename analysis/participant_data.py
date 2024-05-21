@@ -14,7 +14,6 @@ class ParticipantData:
         placed_positions = xml_analyzer.extract_all_placed_positions()
         trial_conditions = xml_analyzer.extract_all_trial_types()
 
-
         data = []
         for real, placed, condition in zip(real_positions, placed_positions, trial_conditions):
             trial_num = real[0]

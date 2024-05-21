@@ -15,21 +15,39 @@ class XMLAnalyzer:
                 xml_files.append(os.path.join(self.folder_path, file))
         return xml_files
     
-    def extract_all_object_positions(self):
+    def extract_all_object_positions(self,  include_block_num=False):
         all_positions = []
         for xml_file in self.xml_files:
             block_num = int(xml_file.split('_')[-1].split('.')[0])
             positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Real_Position')
-            all_positions.extend(positions)
+            
+            if(include_block_num):
+                all_positions.extend([(block_num, pos) for pos in positions])
+            else:
+                all_positions.extend(positions)
+
         return all_positions
     
-    def extract_all_placed_positions(self):
+    def extract_all_placed_positions(self, include_block_num=False):
         all_positions = []
         for xml_file in self.xml_files:
             block_num = int(xml_file.split('_')[-1].split('.')[0])
             positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Placed_Position')
-            all_positions.extend(positions)
+
+            if(include_block_num):
+                all_positions.extend([(block_num, pos) for pos in positions])
+            else:
+                all_positions.extend(positions)
+
         return all_positions
+    
+    def extract_all_trial_types(self):
+        all_trial_types = []
+        for xml_file in self.xml_files:
+            block_num = int(xml_file.split('_')[-1].split('.')[0])
+            trial_types = self.extract_trial_type_from_xml(xml_file, block_num)
+            all_trial_types.extend(trial_types)
+        return all_trial_types
 
     def extract_object_positions_tag_from_xml(self, xml_file, block_num, tag_name):
         positions_list = []
@@ -52,15 +70,7 @@ class XMLAnalyzer:
                 
         return positions_list
     
-    def extract_all_trial_types(self):
-        all_trial_types = []
-        for xml_file in self.xml_files:
-            block_num = int(xml_file.split('_')[-1].split('.')[0])
-            trial_types = self.extract_trial_type_from_xml(xml_file, block_num)
-            all_trial_types.extend(trial_types)
-        return all_trial_types
-    
-    def extract_trial_type_from_xml(self, xml_file, block_num):
+    def extract_trial_type_from_xml(self, xml_file):
         trial_types_list = []
         tree = etree.parse(xml_file)
         trials = tree.xpath('//Trial')
