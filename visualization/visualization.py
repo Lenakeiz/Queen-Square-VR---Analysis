@@ -1,5 +1,6 @@
 import os
 import matplotlib.pyplot as plt
+from analysis.participant_data import ParticipantData
 from config import Config
 
 class TrialVisualizer:

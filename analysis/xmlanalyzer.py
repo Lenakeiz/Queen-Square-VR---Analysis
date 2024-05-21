@@ -52,6 +52,25 @@ class XMLAnalyzer:
                 
         return positions_list
     
+    def extract_all_trial_types(self):
+        all_trial_types = []
+        for xml_file in self.xml_files:
+            block_num = int(xml_file.split('_')[-1].split('.')[0])
+            trial_types = self.extract_trial_type_from_xml(xml_file, block_num)
+            all_trial_types.extend(trial_types)
+        return all_trial_types
+    
+    def extract_trial_type_from_xml(self, xml_file, block_num):
+        trial_types_list = []
+        tree = etree.parse(xml_file)
+        trials = tree.xpath('//Trial')
+
+        for trial in trials:
+            trial_type = trial.find('Condition').text
+            trial_types_list.append(trial_type)
+                
+        return trial_types_list
+    
     def count_conditions_in_files(self):
         condition_dict = {condition: 0 for condition in Config.CONDITIONS}
 
