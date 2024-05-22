@@ -39,6 +39,3 @@ class ParticipantData:
         output_path = os.path.join(participant_dir, f'{self.participant_id}_data.csv')
         self.data.to_csv(output_path, index=False)
         print(f"{self.participant_id}: data saved to {output_path}")
-
-if __name__ == "__main__":
-    pass
