@@ -44,8 +44,7 @@ class XMLAnalyzer:
     def extract_all_trial_types(self):
         all_trial_types = []
         for xml_file in self.xml_files:
-            block_num = int(xml_file.split('_')[-1].split('.')[0])
-            trial_types = self.extract_trial_type_from_xml(xml_file, block_num)
+            trial_types = self.extract_trial_type_from_xml(xml_file)
             all_trial_types.extend(trial_types)
         return all_trial_types
 

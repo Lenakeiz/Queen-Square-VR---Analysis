@@ -1,6 +1,8 @@
 from analysis.xmlanalyzer import XMLAnalyzer
 from visualization.visualization import TrialVisualizer
 
+# visualizing data from the example data folder
+
 if __name__ == "__main__":
 
     participant_id = "1"
