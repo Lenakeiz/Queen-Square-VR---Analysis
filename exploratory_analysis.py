@@ -13,6 +13,7 @@ def visualize_data(participant_data_list):
         participant_id = participant_data.participant_id
         data_frame = participant_data.data
         visualizer = ParticipantVisualizer(participant_id, data_frame)
+        # plotting radial plots
         visualizer.create_radial_plots()
         visualizer.create_radial_plots_by_condition()
 
