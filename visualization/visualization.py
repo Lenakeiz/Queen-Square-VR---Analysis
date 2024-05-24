@@ -231,7 +231,7 @@ class ParticipantVisualizer:
 
         # Create a distribution plot for all trial types combined
         plt.figure(figsize=(10, 6))
-        sns.histplot(data=plot_df, x='r', palette=palette, binwidth=0.5)
+        sns.histplot(data=plot_df, x='r', binwidth=0.5)
         plt.xlim(0, 12)
         plt.xlabel('Distance')
         plt.ylabel('Count')
