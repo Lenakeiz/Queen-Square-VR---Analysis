@@ -81,10 +81,12 @@ class TrialVisualizer:
         self.fig.savefig(self._get_output_path())
 
 class ParticipantVisualizer:
-    def __init__(self, participant_id, data_frame):
+    def __init__(self, participant_id, data_frame, root_directory, group_category):
         self.participant_id = participant_id
         self.data_frame = data_frame
-        self.logdir = os.path.join(Config.get_output_subdir("radialPlots"), participant_id)
+        self.root_directory = root_directory
+        self.group_category = group_category
+        self.logdir = os.path.join(self.root_directory, self.group_category, self.participant_id)
         self._init_output_dir()
 
     def _init_output_dir(self):

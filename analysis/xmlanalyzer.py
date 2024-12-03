@@ -51,7 +51,9 @@ class XMLAnalyzer:
             
             overall_trial_num = (block_num - 1) * 6 + trial_num
             data_list.append((overall_trial_num, trial_type, trial_data))
-            
+
+        return data_list
+
     
     def count_conditions_in_files(self):
         condition_dict = {condition: 0 for condition in Config.CONDITIONS}

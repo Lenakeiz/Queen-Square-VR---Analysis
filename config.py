@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    OBJECT_CONFIGURATION_CSV_FILE_PATH = './configuration/4.csv'
+    OBJECT_CONFIGURATION_CSV_FILE_PATH = './configuration/4(24_trials).csv'
     OUTPUT_DIR = './output'
     CONDITIONS = {"WalkEgo", "WalkAllo", "Teleport"}
     INPUT_DIR = './data'

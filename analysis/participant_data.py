@@ -5,10 +5,12 @@ from config import Config
 from analysis.xmlanalyzer import XMLAnalyzer
 
 class ParticipantData:
-    def __init__(self, participant_id, folder_path):
+    def __init__(self, participant_id, folder_path, data_group):
         self.participant_id = participant_id
         self.folder_path = folder_path
+        self.data_group = data_group
         self.xml_analyzer = XMLAnalyzer(participant_id=self.participant_id, folder_path=self.folder_path)
+        self._print_condition_counts()
         self.data = self._load_data()
 
     def _load_data(self):
@@ -20,11 +22,17 @@ class ParticipantData:
             
             for obj_data in object_data:
                 obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time = obj_data
+                duration = end_time - start_time
                 distance = np.sqrt((real_x - placed_x) ** 2 + (real_z - placed_z) ** 2)
-                data.append([self.participant_id, block_num, trial_type, trial_num, obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time, distance])
+                data.append([self.participant_id, block_num, trial_type, trial_num, obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time, distance, duration, self.data_group])
 
-        columns = ['participant_id', 'block_num', 'trial_type', 'trial_num', 'object_id', 'real_x', 'real_z', 'placed_x', 'placed_z', 'start_time', 'end_time', 'distance']
-        return pd.DataFrame(data, columns=columns)
+        columns = ['participant_id', 'block_num', 'trial_type', 'trial_num', 'object_id', 'real_x', 'real_z', 'placed_x', 'placed_z', 'start_time', 'end_time', 'distance', 'duration', 'status']
+        df = pd.DataFrame(data, columns=columns)
+        
+        df['participant_numeric_id'] = df['participant_id'].str.extract('(\d+)').astype(int)
+        column_order = ['participant_id', 'participant_numeric_id', 'status', 'block_num', 'trial_type', 'trial_num', 'object_id', 'real_x', 'real_z', 'placed_x', 'placed_z', 'start_time', 'end_time', 'distance', 'duration']
+        df = df[column_order]
+        return df
     
     def _print_condition_counts(self):
         condition_counts = self.xml_analyzer.count_conditions_in_files()
