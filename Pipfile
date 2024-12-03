@@ -10,6 +10,7 @@ lxml = "*"
 seaborn = "*"
 numpy = "*"
 scipy = "*"
+jupyter = "*"
 
 [dev-packages]
 
