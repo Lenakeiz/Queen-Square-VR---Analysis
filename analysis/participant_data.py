@@ -8,30 +8,30 @@ class ParticipantData:
     def __init__(self, participant_id, folder_path):
         self.participant_id = participant_id
         self.folder_path = folder_path
+        self.xml_analyzer = XMLAnalyzer(participant_id=self.participant_id, folder_path=self.folder_path)
         self.data = self._load_data()
 
     def _load_data(self):
-        xml_analyzer = XMLAnalyzer(participant_id=self.participant_id, folder_path=self.folder_path)
-        real_positions = xml_analyzer.extract_all_object_positions(include_block_num=True)
-        placed_positions = xml_analyzer.extract_all_placed_positions(include_block_num=True)
-        trial_conditions = xml_analyzer.extract_all_trial_types()
+        all_data = self.xml_analyzer.extract_all_object_data(include_block_num=True)
 
         data = []
-        for real, placed, condition in zip(real_positions, placed_positions, trial_conditions):
-            block_num_real, real_pos_data = real
-            block_num_placed, placed_pos_data = placed
-            type_condition = condition
-            trial_num = real_pos_data[0]
+        for block_num, trial_data in all_data:
+            trial_num, trial_type, object_data = trial_data
             
-            for obj_num, (real_pos, placed_pos) in enumerate(zip(real_pos_data[1], placed_pos_data[1]), start=1):
-                real_x, real_z = real_pos
-                placed_x, placed_z = placed_pos
+            for obj_data in object_data:
+                obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time = obj_data
                 distance = np.sqrt((real_x - placed_x) ** 2 + (real_z - placed_z) ** 2)
-                data.append([self.participant_id, block_num_real, type_condition, trial_num, obj_num, real_x, real_z, placed_x, placed_z, distance])
+                data.append([self.participant_id, block_num, trial_type, trial_num, obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time, distance])
 
-        columns = ['participant_id', 'block_num', 'trial_type', 'trial_num', 'object_num', 'real_x', 'real_z', 'placed_x', 'placed_z', 'distance']
+        columns = ['participant_id', 'block_num', 'trial_type', 'trial_num', 'object_id', 'real_x', 'real_z', 'placed_x', 'placed_z', 'start_time', 'end_time', 'distance']
         return pd.DataFrame(data, columns=columns)
-
+    
+    def _print_condition_counts(self):
+        condition_counts = self.xml_analyzer.count_conditions_in_files()
+        print(f"Condition counts for participant {self.participant_id}:")
+        for condition, count in condition_counts.items():
+            print(f"{condition}: {count}")
+        print()
 
     def save_data(self, subdirectory=''):
         participant_dir = os.path.join(Config.get_output_subdir('extracted_data'),subdirectory)
