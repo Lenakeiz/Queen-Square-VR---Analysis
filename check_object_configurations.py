@@ -6,6 +6,8 @@ import os
 from config import Config
 
 def generate_plots(csv_file_path, output_dir, zip_file_path):
+
+    print(f"Generating plots for {csv_file_path} and saving to {output_dir}")
     # Load the CSV file into a DataFrame
     df = pd.read_csv(csv_file_path, header=None)
 
@@ -61,6 +63,8 @@ def generate_plots(csv_file_path, output_dir, zip_file_path):
         for root, _, files in os.walk(output_dir):
             for file in files:
                 zipf.write(os.path.join(root, file), file)
+                
+    print(f"Plots generated and zipped to {zip_file_path}")
 
 if __name__ == "__main__":
     csv_file_path = Config.OBJECT_CONFIGURATION_CSV_FILE_PATH
