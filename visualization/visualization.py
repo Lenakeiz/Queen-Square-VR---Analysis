@@ -16,7 +16,7 @@ class TrialVisualizer:
         self.participant_id = participant_id
         self.root_directory = root_directory
         self.group_category = group_category
-        self.logdir = os.path.join(self.root_directory, self.group_category, participant_id)
+        self.logdir = os.path.join(self.root_directory, self.group_category, participant_id,'single_trials')
         self.colors = ['blue', 'gray', 'purple', 'orange']
         self._init_figure()
 

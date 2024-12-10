@@ -41,6 +41,9 @@ class ParticipantData:
             print(f"{condition}: {count}")
         print()
 
+    def get_object_positions(self):
+        return self.data[['trial_num', 'object_id', 'real_x', 'real_z', 'placed_x', 'placed_z']]
+
     def save_data(self, subdirectory=''):
         participant_dir = os.path.join(Config.get_output_subdir('extracted_data'),subdirectory)
         os.makedirs(participant_dir, exist_ok=True)
