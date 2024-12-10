@@ -9,12 +9,14 @@ from analysis.participant_data import ParticipantData
 from config import Config
 
 class TrialVisualizer:
-    def __init__(self, object_positions, placed_positions, trial_number, participant_id):
+    def __init__(self, object_positions, placed_positions, trial_number, participant_id, root_directory, group_category):
         self.object_positions = object_positions
         self.placed_positions = placed_positions
         self.trial_number = trial_number
         self.participant_id = participant_id
-        self.logdir = os.path.join(Config.get_output_subdir("visualizations"), participant_id)
+        self.root_directory = root_directory
+        self.group_category = group_category
+        self.logdir = os.path.join(self.root_directory, self.group_category, participant_id,'single_trials')
         self.colors = ['blue', 'gray', 'purple', 'orange']
         self._init_figure()
 
@@ -81,10 +83,12 @@ class TrialVisualizer:
         self.fig.savefig(self._get_output_path())
 
 class ParticipantVisualizer:
-    def __init__(self, participant_id, data_frame):
+    def __init__(self, participant_id, data_frame, root_directory, group_category):
         self.participant_id = participant_id
         self.data_frame = data_frame
-        self.logdir = os.path.join(Config.get_output_subdir("radialPlots"), participant_id)
+        self.root_directory = root_directory
+        self.group_category = group_category
+        self.logdir = os.path.join(self.root_directory, self.group_category, self.participant_id)
         self._init_output_dir()
 
     def _init_output_dir(self):

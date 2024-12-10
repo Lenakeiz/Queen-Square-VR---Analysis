@@ -7,8 +7,8 @@ from config import Config
 class DataLoader:
     def __init__(self, data_directory: str, data_group='unknown'):
         self.data_directory = data_directory
-        self.participant_data_list = self._load_data()
         self.data_group = data_group
+        self.participant_data_list = self._load_data()        
 
     def _get_unique_participant_ids(self) -> List[str]:
         participant_ids = set()
@@ -23,7 +23,7 @@ class DataLoader:
         participant_data_list = []
 
         for participant_id in participant_ids:
-            participant_data = ParticipantData(participant_id, self.data_directory)
+            participant_data = ParticipantData(participant_id, self.data_directory, self.data_group)
             participant_data_list.append(participant_data)
         
         return participant_data_list

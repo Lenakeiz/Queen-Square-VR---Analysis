@@ -15,70 +15,45 @@ class XMLAnalyzer:
                 xml_files.append(os.path.join(self.folder_path, file))
         return xml_files
     
-    def extract_all_object_positions(self,  include_block_num=False):
-        all_positions = []
+    def extract_all_object_data(self,  include_block_num=False):
+        all_data = []
         for xml_file in self.xml_files:
             block_num = int(xml_file.split('_')[-1].split('.')[0])
-            positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Real_Position')
+            data = self.extract_object_data_from_xml(xml_file, block_num)
             
-            if(include_block_num):
-                all_positions.extend([(block_num, pos) for pos in positions])
+            if include_block_num:
+                all_data.extend([(block_num, d) for d in data])
             else:
-                all_positions.extend(positions)
+                all_data.extend(data)
 
-        return all_positions
-    
-    def extract_all_placed_positions(self, include_block_num=False):
-        all_positions = []
-        for xml_file in self.xml_files:
-            block_num = int(xml_file.split('_')[-1].split('.')[0])
-            positions = self.extract_object_positions_tag_from_xml(xml_file, block_num, 'Placed_Position')
+        return all_data
 
-            if(include_block_num):
-                all_positions.extend([(block_num, pos) for pos in positions])
-            else:
-                all_positions.extend(positions)
-
-        return all_positions
-    
-    def extract_all_trial_types(self):
-        all_trial_types = []
-        for xml_file in self.xml_files:
-            trial_types = self.extract_trial_type_from_xml(xml_file)
-            all_trial_types.extend(trial_types)
-        return all_trial_types
-
-    def extract_object_positions_tag_from_xml(self, xml_file, block_num, tag_name):
-        positions_list = []
+    def extract_object_data_from_xml(self, xml_file, block_num):
+        data_list = []
         tree = etree.parse(xml_file)
         trials = tree.xpath('//Trial')
 
         for trial in trials:
             trial_num = int(trial.find('TrialNumber').text)
+            trial_type = trial.find('Condition').text
             object_infos = trial.xpath('.//ConfigurationInfo/ObjectInfo')
             
-            positions = []
+            trial_data = []
             for obj_info in object_infos:
-                x = float(obj_info.xpath(f"./{tag_name}/x/text()")[0])
-                z = float(obj_info.xpath(f"./{tag_name}/z/text()")[0])
-                positions.append((x, z))
+                obj_id = int(obj_info.find('Id').text)
+                real_x = round(float(obj_info.xpath("./Real_Position/x/text()")[0]), 3)
+                real_z = round(float(obj_info.xpath("./Real_Position/z/text()")[0]), 3)
+                placed_x = round(float(obj_info.xpath("./Placed_Position/x/text()")[0]), 3)
+                placed_z = round(float(obj_info.xpath("./Placed_Position/z/text()")[0]), 3)
+                start_time = round(float(obj_info.find('Start_TrialTrial_UnityTimeStamp').text), 3)
+                end_time = round(float(obj_info.find('End_Trial_UnityTimeStamp').text), 3)
+                trial_data.append((obj_id, real_x, real_z, placed_x, placed_z, start_time, end_time))
             
-            #ANDREA: need to change the hardcoded values for the number of trials per block
             overall_trial_num = (block_num - 1) * 6 + trial_num
-            positions_list.append((overall_trial_num, positions))
-                
-        return positions_list
-    
-    def extract_trial_type_from_xml(self, xml_file):
-        trial_types_list = []
-        tree = etree.parse(xml_file)
-        trials = tree.xpath('//Trial')
+            data_list.append((overall_trial_num, trial_type, trial_data))
 
-        for trial in trials:
-            trial_type = trial.find('Condition').text
-            trial_types_list.append(trial_type)
-                
-        return trial_types_list
+        return data_list
+
     
     def count_conditions_in_files(self):
         condition_dict = {condition: 0 for condition in Config.CONDITIONS}

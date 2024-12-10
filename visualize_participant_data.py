@@ -1,5 +1,6 @@
 from analysis.xmlanalyzer import XMLAnalyzer
 from visualization.visualization import TrialVisualizer
+from config import Config
 
 # visualizing data from the example data folder
 
@@ -8,12 +9,15 @@ if __name__ == "__main__":
     participant_id = "1"
 
     xmlanalyzer = XMLAnalyzer(participant_id, "./example-data")
-    object_positions = xmlanalyzer.extract_all_object_positions()
-    placed_positions = xmlanalyzer.extract_all_placed_positions()
+    trial_data = xmlanalyzer.extract_all_object_data()
 
-    if len(object_positions) != len(placed_positions):
-        raise ValueError("The dimensions of object_positions and placed_positions are not the same. Please check imported data.")
-    
-    for trial_num, (object_positions, placed_positions) in enumerate(zip(object_positions, placed_positions), 1):
-        visualizer = TrialVisualizer(object_positions, placed_positions, trial_num, participant_id)
+    root_directory = Config.get_output_subdir("visualization")
+    group_category = "example-data"
+
+    for trial in trial_data:
+        trial_num, trial_type, object_data = trial
+        object_positions = [(real_x, real_z) for _, real_x, real_z, _, _, _, _ in object_data]
+        placed_positions = [(placed_x, placed_z) for _, _, _, placed_x, placed_z, _, _ in object_data]
+
+        visualizer = TrialVisualizer((trial_num, object_positions), (trial_num, placed_positions), trial_num, participant_id, root_directory, group_category)
         visualizer.plot()
